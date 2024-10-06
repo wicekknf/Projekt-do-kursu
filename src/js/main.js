@@ -1,11 +1,13 @@
 const miniHamburger = document.querySelector(".hamburger-icon");
 const miniClose = document.querySelector(".close-icon");
 const miniNavList = document.querySelector(".mini-nav-list");
+const miniNavItems = miniNavList.querySelectorAll("a");
 const year = document.querySelector(".year");
 
+console.log(miniNavItems);
 
 const currentYear = new Date().getFullYear();
-year.textContent = currentYear
+year.textContent = currentYear;
 
 console.log(miniNavList);
 const showNav = () => {
@@ -19,6 +21,9 @@ const hideNav = () => {
 	miniHamburger.style.display = "block";
 };
 
+miniNavItems.forEach((e) => {
+	e.addEventListener("click", hideNav);
+});
 
 miniHamburger.addEventListener("click", showNav);
 miniClose.addEventListener("click", hideNav);
