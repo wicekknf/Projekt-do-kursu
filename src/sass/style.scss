@@ -26,10 +26,10 @@ body {
 	max-width: 1200px;
 }
 
-.aaa {
-	width: 90vw;
-	height: 2000px;
-}
+// .aaa {
+// 	width: 90vw;
+// 	height: 2000px;
+// }
 
 // NAV
 
@@ -143,7 +143,7 @@ nav {
 		width: 40rem;
 	}
 
-	.nav-list a {
+	.a-style {
 		display: inline-block;
 		line-height: 80px;
 		text-align: center;
@@ -159,7 +159,7 @@ nav {
 		background-color: black;
 	}
 
-	.spy {
+	.active{
 		color: #fff;
 		background-color: black;
 	}
@@ -183,7 +183,7 @@ nav {
 	height: 50vh;
 	margin-top: 80px;
 	margin-bottom: 5em;
-	background-image: url("/dist/img/jungle-small.jpg");
+	background-image: url("../img/jungle-small.jpg");
 	background-position-x: center;
 	background-position-y: 70%;
 	background-size: cover;
@@ -214,7 +214,7 @@ nav {
 @media (width > 576px) {
 	.hero {
 		height: 55vh;
-		background-image: url("/dist/img/jungle-big.jpg");
+		background-image: url("../img/jungle-big.jpg");
 	}
 
 	.hero-text {
@@ -320,10 +320,12 @@ nav {
 }
 
 @media (width > 992px) {
+	
 	.about-us {
-		flex-direction: row;
-		align-items: start;
 		padding-top: 0;
+	}
+	.about-us-box {
+		display: flex;
 	}
 	.about-us-text {
 		flex-shrink: 1.6;
@@ -338,9 +340,7 @@ nav {
 }
 
 @media (width > 1200px) {
-	.about-us {
-		flex-direction: row;
-	}
+
 	.about-us-text {
 		margin-top: 0;
 		padding-top: 0;
@@ -357,7 +357,7 @@ nav {
 	position: relative;
 	width: 100%;
 	height: 40vh;
-	background-image: url("/dist/img/girl-small.jpg");
+	background-image: url("../img/girl-small.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -391,7 +391,7 @@ nav {
 
 @media (width > 768px) {
 	.hero2 {
-		background-image: url("/dist/img/girl-big.jpg");
+		background-image: url("../img/girl-big.jpg");
 	}
 
 	.hero2-text p {
@@ -418,7 +418,7 @@ nav {
 }
 
 .offer > p {
-	margin: 3em 1em;
+	margin: 0em 1em 2em;
 	text-align: center;
 }
 
@@ -489,7 +489,8 @@ nav {
 	transition: box-shadow 0.3s, background-color 0.3s;
 }
 
-.standard-btn, .other-offers {
+.standard-btn,
+.other-offers {
 	box-shadow: 0 2px 10px #23f527;
 	background-color: #23f527;
 }
@@ -498,8 +499,6 @@ nav {
 	box-shadow: 0 2px 10px #1dce20;
 	background-color: #1dce20;
 }
-
-
 
 .one {
 	li:nth-last-child(3),
