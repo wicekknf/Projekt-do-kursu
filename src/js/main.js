@@ -5,12 +5,9 @@ const miniNavItems = miniNavList.querySelectorAll("a");
 const year = document.querySelector(".year");
 const navList = document.querySelector(".nav-list");
 
-console.log(miniNavItems);
-
 const currentYear = new Date().getFullYear();
 year.textContent = currentYear;
 
-console.log(miniNavList);
 const showNav = () => {
 	miniNavList.classList.add("show-miniNav");
 	miniClose.style.display = "block";
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		sections.forEach((section) => {
 			const sectionTop = section.offsetTop;
 			if (scrollY >= sectionTop - 80) {
-				console.log(scrollY);
 				currentSection = section.getAttribute("id");
 			}
 		});
