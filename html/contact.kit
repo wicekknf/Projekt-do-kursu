@@ -77,10 +77,58 @@
 			</div>
 		</div>
 
-		<section id="contact">
-			<div class="form">
-				<form action=""></form>
-			</div>
+		<section
+			id="contact"
+			class="contact wrapper"
+		>
+			<h2 class="section-title">Masz pytania?</h2>
+			<p class="info">Napisz do nas!!!</p>
+
+			<form>
+				<h3>Kontakt:</h3>
+				<div class="form-box">
+					<label for="name">imię:</label>
+					<input
+						type="text"
+						id="name"
+						placeholder="Wpisz swoje imię"
+					/>
+					<p class="error-text">error</p>
+				</div>
+
+				<div class="form-box">
+					<label for="name">e-mail:</label>
+					<input
+						type="e-mail"
+						id="name"
+						placeholder="Wpisz swój adres e-mail"
+					/>
+					<p class="error-text">error</p>
+				</div>
+
+				<div class="form-box msg">
+					<label for="msg">wiadomość:</label>
+					<textarea
+						name=""
+						id="msg"
+						cols="30"
+						rows="10"
+					></textarea>
+					<p class="error-text">error</p>
+				</div>
+
+				<div class="control-buttons">
+					<button class="send">Wyślij</button>
+					<button class="clear">Wyczyść</button>
+				</div>
+
+				<div class="popup">
+					<p>Wiadomość wysłana!</p>
+					<button class="close">Zamknij</button>
+				</div>
+			</form>
+
+			<p class="info">Lub przyjdź porozmawiać, ZAPRASZAMY!</p>
 
 			<div class="map">
 				<iframe
