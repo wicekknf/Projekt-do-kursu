@@ -229,7 +229,10 @@ nav {
 @media (width > 768px) {
 	.hero-text {
 		left: 3em;
-		font-size: 2.5rem;
+		font-size: 3.5rem;
+	}
+	.hero-text h1 {
+		font-size: 5.5rem;
 	}
 }
 
@@ -239,7 +242,10 @@ nav {
 	}
 	.hero-text {
 		left: 4em;
-		font-size: 3rem;
+		font-size: 4rem;
+	}
+	.hero-text h1 {
+		font-size: 6rem;
 	}
 
 	.nav-list {
@@ -309,7 +315,7 @@ nav {
 		padding: 2em;
 	}
 	.about-us-text {
-		padding: 1.5em;
+		padding: 1.7em;
 	}
 }
 
@@ -317,9 +323,18 @@ nav {
 	.about-us {
 		padding: 3em;
 	}
+	.section-title {
+		font-size: 3rem;
+	}
+	.about-us-text {
+		font-size: 1.9rem;
+	}
 }
 
 @media (width > 992px) {
+	.section-title {
+		font-size: 3.5rem;
+	}
 	.about-us {
 		padding-top: 0;
 	}
@@ -327,6 +342,7 @@ nav {
 		display: flex;
 	}
 	.about-us-text {
+		font-size: 2rem;
 		flex-shrink: 1.6;
 		padding-top: 0;
 		margin-top: 0;
@@ -563,6 +579,20 @@ nav {
 		width: 300px;
 		font-size: 2rem;
 	}
+	.info {
+		font-size: 1.8rem;
+	}
+}
+
+@media (width > 768px) {
+	.info {
+		font-size: 2rem;
+	}
+}
+@media (width > 992px) {
+	.info {
+		font-size: 2.5rem;
+	}
 }
 
 // FOOTER
@@ -679,18 +709,22 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	.info {
 		font-size: 2rem;
 		margin-bottom: 2em;
 	}
 
 	form {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 5em;
 		padding: 1em;
+		width: 280px;
+		height: 520px;
 		box-shadow: 0 2px 10px #878787;
 		border-radius: 8px;
 		background: rgba(17, 238, 50, 0.2);
@@ -711,13 +745,15 @@ footer {
 			border-radius: 4px;
 			outline: none;
 		}
-		
+
 		textarea {
 			border-radius: 7px;
 			outline: none;
 		}
 
-		input:focus, textarea:focus, button:focus {
+		input:focus,
+		textarea:focus,
+		button:focus {
 			border: 2px solid rgb(35, 241, 4);
 		}
 
@@ -725,11 +761,10 @@ footer {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
-
-			
 		}
 
-		.form-box.error input, .form-box.error textarea {
+		.form-box.error input,
+		.form-box.error textarea {
 			border: 1px solid rgb(249, 81, 81);
 			background-color: rgba(249, 81, 81, 0.1);
 		}
@@ -747,15 +782,13 @@ footer {
 			flex-direction: column;
 
 			textarea {
-				max-width: 250px;
-				min-width: 100px;
-				height: 200px;
-				max-height: 400px;
+				max-width: 100%;
+				min-width: 100%;
+				min-height: 200px;
+				max-height: 200px;
 			}
 		}
 	}
-
-
 }
 
 .error-text {
@@ -778,7 +811,9 @@ footer {
 	margin-right: 2em;
 }
 
-.send, .clear, .close {
+.send,
+.clear,
+.close {
 	padding: 0.5em 1em;
 	border-radius: 6px;
 	background: none;
@@ -786,22 +821,50 @@ footer {
 	border: none;
 	cursor: pointer;
 	color: #fff;
-	transition: background-color .3s, color .3s;
+	transition: background-color 0.3s, color 0.3s;
 	outline: none;
 }
 
-.send:hover, .clear:hover, .close:hover {
+.send:hover,
+.clear:hover,
+.close:hover {
 	background-color: #3ceb2f;
-	color:black;
+	color: black;
 }
 
-.send:focus, .clear:focus, .close:focus {
+.send:focus,
+.clear:focus,
+.close:focus {
 	background-color: #3ceb2f;
-	color:black;
+	color: black;
 }
 
-.popup{
-	display: none;
+.popup {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.75);
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	// visibility: hidden;
+
+	p {
+		margin-bottom: 1em;
+		color: #fff;
+	}
+}
+
+.line{
+	width: 90%;
+	height: 2px;
+	background-color: rgb(2, 124, 8);
+	margin-bottom: 2em;
 }
 
 .map {
@@ -813,4 +876,31 @@ footer {
 	box-shadow: 0 2px 10px #878787;
 	border-radius: 8px;
 	overflow: hidden;
+}
+
+@media (width > 576px) {
+	.contact {
+		form {
+			width: 400px;
+		}
+		h2 {
+			font-size: 2.8rem;
+		}
+		.info {
+			font-size: 2.5rem;
+		}
+	}
+	.map {
+		width: 400px;
+	}
+}
+@media (width > 992px) {
+	.contact {
+		form {
+			width: 500px;
+		}
+	}
+	.map {
+		width: 500px;
+	}
 }
