@@ -373,6 +373,7 @@ nav {
 	height: 40vh;
 	background-image: url("../img/girl-small.jpg");
 	background-position: center;
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -860,7 +861,7 @@ footer {
 	}
 }
 
-.line{
+.line {
 	width: 90%;
 	height: 2px;
 	background-color: rgb(2, 124, 8);
@@ -902,5 +903,52 @@ footer {
 	}
 	.map {
 		width: 500px;
+	}
+}
+
+// EROR 404
+
+.error404 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 130px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.8rem;
+	margin-bottom: 2em;
+}
+
+.img-error {
+	margin-bottom: 4em;
+	width: 200px;
+	height: 150px;
+	background-image: url("../img/error-6482984_1280.webp");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+@media (width > 576px) {
+	h2 {
+		font-size: 2.2rem;
+	}
+
+	.img-error {
+		width: 400px;
+		height: 300px;
+	}
+}
+@media (width > 992px) {
+	h2 {
+		font-size: 3rem;
+	}
+
+	.img-error {
+		width: 600px;
+		height: 400px;
 	}
 }
