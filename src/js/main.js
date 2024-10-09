@@ -79,7 +79,6 @@ const checkInput = (elementIn) => {
 			showError(el, el.placeholder);
 		} else {
 			hideError(el);
-			console.log("wysłano");
 		}
 	});
 };
@@ -88,6 +87,18 @@ const checkTextarea = (elementIn) => {
 	if (elementIn.value === "") {
 		elementIn.parentElement.classList.add("error");
 		elementIn.nextElementSibling.textContent = "wiadomość jest pusta";
+	} else {
+		hideError(elementIn);
+	}
+};
+
+const checkNameLenght = (input, length) => {
+	console.log(input);
+	if (input.value.length < length) {
+		console.log("nok");
+		showError(input, "Imię jest za krótkie");
+	} else {
+		hideError(input);
 	}
 };
 
@@ -96,6 +107,7 @@ sendBtn.addEventListener("click", (e) => {
 
 	checkInput([nameInput, emailInput]);
 	checkTextarea(textArea);
+	checkNameLenght(nameInput, 3);
 });
 
 // czyszczenie formularza
