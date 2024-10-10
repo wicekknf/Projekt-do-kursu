@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}
+	miniHamburger.addEventListener("click", showNav);
+	miniClose.addEventListener("click", hideNav);
 
 	// Nasłuchuj przewijania strony
 	window.addEventListener("scroll", updateActiveLink);
@@ -120,6 +122,3 @@ clearBtn.addEventListener("click", (e) => {
 		el.parentElement.classList.remove("error");
 	});
 });
-
-miniHamburger.addEventListener("click", showNav);
-miniClose.addEventListener("click", hideNav);
